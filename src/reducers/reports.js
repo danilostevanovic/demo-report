@@ -1,6 +1,6 @@
-import reportsData from '../config/reports-data';
+import reports from '../config/reports';
 
-const reportsState = [...reportsData];
+const reportsState = [...reports];
 
 
 const reportsReducer = (state = reportsState, action) => state
