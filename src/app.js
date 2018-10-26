@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import AppRouter from './routes/AppRouter';
 import configureStore from './store/configureStore';
-import { setStartDate,resetFilters,setEndDate } from './actions/filters';
+import { setStartDate, resetFilters, setEndDate } from './actions/filters';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
@@ -13,7 +14,9 @@ console.log(store.getState())
 
 const jsx = (
     <Provider store={store}>
-        <h1>This is a test</h1>
+        <div>
+            <AppRouter />
+        </div>
     </Provider>
 )
 
