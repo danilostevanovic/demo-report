@@ -26,6 +26,8 @@ const jsx = (
 const state = store.getState();
 
 
+
+
 console.log('iz selektora contact',getContact(54867972,state.contacts))
 
 

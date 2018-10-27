@@ -25,7 +25,7 @@ const generateData = (contactId, howMany) => {
     for (let i = 0; i < howMany; i++) {
         let data = {
             contactId: contactId,
-            createdAt: moment(`${randomNumbers(1, 28, 1)[0]}/10/2018`),
+            createdAt:moment().subtract(i-1, 'days'),
             graphs: {
                 'status': randomNumbers(5, 100, 10),
                 'interterence': randomNumbers(5, 100, 10),
@@ -74,13 +74,13 @@ const generateData = (contactId, howMany) => {
 };
 
 const data = [
-    ...generateData(54867972,7),
-    ...generateData(31495080,7),
-    ...generateData(31452503,7),
-    ...generateData(79238775,7),
-    ...generateData(39531833,7),
+    ...generateData(54867972,12),
+    ...generateData(31495080,11),
+    ...generateData(31452503,10),
+    ...generateData(79238775,9),
+    ...generateData(39531833,8),
     ...generateData(33992438,7),
-    ...generateData(93603004,7)
+    ...generateData(93603004,6)
 ]
 
 

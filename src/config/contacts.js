@@ -24,7 +24,7 @@ const randomEnabled = () => {
     return enabled[Math.floor(Math.random() * enabled.length)]
 }
 
-const generateData = (id, mac, howMany) => {
+const generateContact = (id, mac, howMany) => {
     let arrayOfData = [];
     for (let i = 0; i < howMany; i++) {
         let data = {
@@ -56,13 +56,13 @@ const generateData = (id, mac, howMany) => {
     return arrayOfData
 }
 const contacts = [
-    ...generateData(54867972, '58-90-77-22-75-5C', 1),
-    ...generateData(31495080, '5A-3D-30-13-8F-15', 1),
-    ...generateData(31452503, 'A3-43-AE-41-2E-D7', 1),
-    ...generateData(79238775, 'B6-06-F6-C7-D5-04', 1),
-    ...generateData(39531833, '9D-01-4A-A4-CB-91', 1),
-    ...generateData(33992438, 'D7-C4-71-4A-47-35', 1),
-    ...generateData(93603004, '0D-D3-6B-05-86-59', 1),
+    ...generateContact(54867972, '58-90-77-22-75-5C', 1),
+    ...generateContact(31495080, '5A-3D-30-13-8F-15', 1),
+    ...generateContact(31452503, 'A3-43-AE-41-2E-D7', 1),
+    ...generateContact(79238775, 'B6-06-F6-C7-D5-04', 1),
+    ...generateContact(39531833, '9D-01-4A-A4-CB-91', 1),
+    ...generateContact(33992438, 'D7-C4-71-4A-47-35', 1),
+    ...generateContact(93603004, '0D-D3-6B-05-86-59', 1),
 ]
 
 
