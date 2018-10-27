@@ -1,13 +1,13 @@
-const getData = (id,data,{date,info}) =>{
-    return data.filter(data=>{
+import moment from 'moment';
+
+const getData = (id, data, { date }) => {
+    return data.filter(data => {
         const idMatch = data.contactId === id;
-        const dateMatch = true
-        const info = true
-         return idMatch && dateMatch && info
-     })
-    
- };
+        const dateMatch = moment(date).isSame(data.createdAt, 'day');  
+        return idMatch && dateMatch 
+    })
+
+};
 
 
 export default getData
-    
