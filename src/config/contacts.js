@@ -1,171 +1,69 @@
+const randomNumbers = (start, end, count) => {
+    let returnArray = [],
+        randomNumber;
+    for (let i = 0; i < count; i++) {
+        randomNumber = Math.floor(Math.random() * (end - start)) + start;
+        if (returnArray.indexOf(randomNumber) == -1) {
+            returnArray.push(randomNumber);
+        } else {
+            --i;
+        }
+    }
+    return returnArray;
+};
+const randomIp = () => {
+    const random = randomNumbers(1, 10, 2);
+    return `192.168.${random[0]}.${random[1]}`
+};
+const randomCity = () => {
+    const city = ['Belgrade', 'Budapest', 'London', 'Vienna', 'Paris'];
+    return city[Math.floor(Math.random() * city.length)]
+}
+const randomEnabled = () => {
+    const enabled = ['yes', 'No'];
+    return enabled[Math.floor(Math.random() * enabled.length)]
+}
 
-const contacts = [{
-    mac:'58-90-77-22-75-5C',
-    contactId:54867972,
-    city:'Belgrade',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.1',
-        mac:'58-90-77-22-75-5C',
-        ContactNo:321321321312,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:6,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'2 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'2.2.1005.76'
-    },
-},
-{
-    mac:'5A-3D-30-13-8F-15',
-    contactId:31495080,
-    city:'Budapest',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.3',
-        mac:'5A-3D-30-13-8F-15',
-        ContactNo:324359696,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:8,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'10 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'4.5.1005.76'
-    },
-},
-{
-    mac:'A3-43-AE-41-2E-D7',
-    contactId:31452503,
-    city:'Romania',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.10',
-        mac:'A3-43-AE-41-2E-D7',
-        ContactNo:775070597075,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:7,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'4 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'4.5.1005.76'
-    },
-},
-{
-    mac:'B6-06-F6-C7-D5-04',
-    contactId:79238775,
-    city:'Barcelona',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.2',
-        mac:'B6-06-F6-C7-D5-04',
-        ContactNo:75475875847,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:10,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'40 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'4.5.1005.76'
-    },
-},
-{
-    mac:'9D-01-4A-A4-CB-91',
-    contactId:39531833,
-    city:'Budapest',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.13',
-        mac:'9D-01-4A-A4-CB-91',
-        ContactNo:111111111,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:1,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'12 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'4.5.1005.76'
-    },
-},
-{
-    mac:'D7-C4-71-4A-47-35',
-    contactId:33992438,
-    city:'Milano',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.13',
-        mac:'D7-C4-71-4A-47-35',
-        ContactNo:7570750705,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:5,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'9 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'4.5.1005.76'
-    },
-},
-{
-    mac:'0D-D3-6B-05-86-59',
-    contactId:93603004,
-    city:'Vienna',
-    HGwInfo:{
-        Wifienabled:'yes',
-        HGWstandard:'802.11b',
-        IpAdress:'192.168.1.16',
-        mac:'0D-D3-6B-05-86-59',
-        ContactNo:65698685968,
-        AutoChanelEnabled:'yes',
-        SSID:'ibis-wifi',
-        Chanel:11,
-        Security:'WPA/WPA2-PSK',
-        Brand:'2,4Ghz',
-        HiddenSSID:'No',
-        Bandwith:'22MHZ',
-        UpTime:'22 days',
-        Equiapment:'ABC',
-        Description:'modem',
-        CMTSID:'BG-C-1-IBS',
-        Firmware:'4.5.1005.76'
-    },
-}]
+const generateData = (id, mac, howMany) => {
+    let arrayOfData = [];
+    for (let i = 0; i < howMany; i++) {
+        let data = {
+            mac: mac,
+            contactId: id,
+            city: randomCity(),
+            HGwInfo: {
+                WifiEnabled: randomEnabled(),
+                HGwStandard: '802.11b',
+                IpAdress: randomIp(),
+                mac: mac,
+                ContactNo: randomNumbers(10000, 50000, 1)[0],
+                AutoChanelEnabled: randomEnabled(),
+                SSID: 'ibis-wifi',
+                Chanel: randomNumbers(1, 10, 1)[0],
+                Security: 'WPA/WPA2-PSK',
+                Brand: '2,4Ghz',
+                HiddenSSID: randomEnabled(),
+                Bandwith: `${randomNumbers(20, 30, 1)[0]}MHZ`,
+                UpTime: `${randomNumbers(1, 20, 1)[0]} days`,
+                Equiapment: 'ABC',
+                Description: 'modem',
+                CMTSID: 'BG-C-1-IBS',
+                Firmware: '2.2.1005.76'
+            },
+        }
+        arrayOfData.push(data)
+    }
+    return arrayOfData
+}
+const contacts = [
+    ...generateData(54867972, '58-90-77-22-75-5C', 1),
+    ...generateData(31495080, '5A-3D-30-13-8F-15', 1),
+    ...generateData(31452503, 'A3-43-AE-41-2E-D7', 1),
+    ...generateData(79238775, 'B6-06-F6-C7-D5-04', 1),
+    ...generateData(39531833, '9D-01-4A-A4-CB-91', 1),
+    ...generateData(33992438, 'D7-C4-71-4A-47-35', 1),
+    ...generateData(93603004, '0D-D3-6B-05-86-59', 1),
+]
+
 
 export default contacts
