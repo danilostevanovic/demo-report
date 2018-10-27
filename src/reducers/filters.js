@@ -1,8 +1,7 @@
 import moment from 'moment';
 
 const filtersReducerDefaultState = {
-  startDate: moment("25/6/2018"),
-  endDate: moment("1/11/2018"),
+  date: moment("25/6/2018"),
   info: true
 };
 

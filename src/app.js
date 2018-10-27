@@ -7,6 +7,9 @@ import { setStartDate, resetFilters, setEndDate } from './actions/filters';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import moment from 'moment';
+import filtersReducer from './reducers/filters';
+import getContact from './selectors/contacts';
+
 
 
 const store = configureStore();
@@ -20,6 +23,10 @@ const jsx = (
         </div>
     </Provider>
 )
+const state = store.getState();
+
+
+console.log('iz selektora contact',getContact(54867972,state.contacts))
 
 
 

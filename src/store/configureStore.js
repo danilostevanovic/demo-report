@@ -1,12 +1,12 @@
 import { createStore, combineReducers } from 'redux';
-import reportsReducer from '../reducers/reports';
+import contactsReducer from '../reducers/contacts';
 import dataReducer from '../reducers/data';
 import filtersReducer from '../reducers/filters';
 
 export default () => {
     const store = createStore(
         combineReducers({
-            reports: reportsReducer,
+            contacts: contactsReducer,
             data: dataReducer,
             filters: filtersReducer
         }),

@@ -3,10 +3,9 @@ import moment from 'moment';
 
 const randomStatus = () => {
     let status = ['Medium', 'Bad', 'Good'];
-    let random = Math.floor(Math.random() * status.length);
-
-    return status[random]
+    return status[ Math.floor(Math.random() * status.length)]
 };
+
 const randomNumbers = (start, end, count) => {
     let returnArray = [],
         randomNumber;

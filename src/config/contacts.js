@@ -1,5 +1,5 @@
 
-const reports = [{
+const contacts = [{
     mac:'58-90-77-22-75-5C',
     contactId:54867972,
     city:'Belgrade',
@@ -168,4 +168,4 @@ const reports = [{
     },
 }]
 
-export default reports
+export default contacts
