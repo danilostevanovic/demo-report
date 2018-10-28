@@ -20,11 +20,12 @@ const randomNumbers = (start, end, count) => {
     return returnArray;
 };
 
-const generateData = (contactId, howMany) => {
+const generateData = (contactId,mac, howMany) => {
     let arrayOfData = [];
     for (let i = 0; i < howMany; i++) {
         let data = {
             contactId: contactId,
+            mac:mac,
             createdAt:moment().subtract(i-1, 'days'),
             graphs: {
                 'status': randomNumbers(5, 100, 10),
@@ -74,13 +75,13 @@ const generateData = (contactId, howMany) => {
 };
 
 const data = [
-    ...generateData(31495080,700),
-    ...generateData(31452503,600),
-    ...generateData(39531833,400),
-    ...generateData(33992438,300),
-    ...generateData(54867972,200),
-    ...generateData(79238775,150),
-    ...generateData(93603004,100)
+    ...generateData(31495080,'5A-3D-30-13-8F-15',700),
+    ...generateData(31452503,'A3-43-AE-41-2E-D7',600),
+    ...generateData(39531833,'9D-01-4A-A4-CB-91',400),
+    ...generateData(33992438,'D7-C4-71-4A-47-35',300),
+    ...generateData(54867972,'58-90-77-22-75-5C',200),
+    ...generateData(79238775,'B6-06-F6-C7-D5-04',150),
+    ...generateData(93603004,'0D-D3-6B-05-86-59',100)
 ]
 
 
