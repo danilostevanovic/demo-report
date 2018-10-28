@@ -1,6 +1,9 @@
 
 const filtersReducerDefaultState = {
   date: '',
+  id: '',
+  mac: '',
+  showData: false
 };
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
@@ -14,7 +17,24 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
       return {
         ...state,
         date: '',
-        info: false
+        id: '',
+        mac: '',
+        showData: false
+      }
+    case 'SET_ID':
+      return {
+        ...state,
+        id: action.id
+      }
+    case 'SET_MAC':
+      return {
+        ...state,
+        mac: action.mac
+      }
+    case 'SET_SHOW_DATA':
+      return {
+        ...state,
+        showData: action.showData
       }
     default:
       return state

@@ -16,6 +16,24 @@ export const resetFilters = () => ({
     type: 'RESET_FILTERS'
 })
 
+// SET ID
+export const setId = (id) =>({
+    type:'SET_ID',
+    id
+})
+
+// SET MAC
+export const setMac = (mac) =>({
+    type:'SET_MAC',
+    mac
+})
+
+// SET SHOW DATA
+export const setShowData = (showData) => ({
+     type:'SET_SHOW_DATA',
+     showData
+})
+
 
 export const store = createStore(
     combineReducers(

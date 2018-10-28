@@ -74,13 +74,13 @@ const generateData = (contactId, howMany) => {
 };
 
 const data = [
-    ...generateData(54867972,100),
-    ...generateData(31495080,90),
-    ...generateData(31452503,80),
-    ...generateData(79238775,70),
-    ...generateData(39531833,60),
-    ...generateData(33992438,50),
-    ...generateData(93603004,40)
+    ...generateData(31495080,700),
+    ...generateData(31452503,600),
+    ...generateData(39531833,400),
+    ...generateData(33992438,300),
+    ...generateData(54867972,200),
+    ...generateData(79238775,150),
+    ...generateData(93603004,100)
 ]
 
 
