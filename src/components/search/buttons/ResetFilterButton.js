@@ -1,9 +1,19 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { resetFilters } from '../../../store/configureStore';
+
 
 const ResetFilterButton = (props) => (
-     <div>
-        <button>Reset Filters</button>
-     </div>
+    <div>
+        <Button onClick={() => {
+            props.dispatch(resetFilters())
+        }} >Reset filters </Button>
+    </div>
 )
-
-export default ResetFilterButton;
+const mapStateToProps = (state) => {
+    return {
+        filters: state.filters
+    }
+}
+export default connect(mapStateToProps)(ResetFilterButton);

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 const ApplyFilersButton = (props) => (
-   <button onClick={props.onClick}>Apply Filters</button>
+   <Button onClick={props.onClick}>Apply Filters</Button>
 )
 export default ApplyFilersButton;

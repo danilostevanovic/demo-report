@@ -2,11 +2,11 @@ import React from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
 
 
-const DateButton = () => (
+const DateButton = (props) => (
         <div>
                 <ButtonGroup>
-                        <Button>1 day</Button>
-                        <Button>7 days</Button>
+                        <Button onClick={props.previousDay}>1 day</Button>
+                        <Button onClick={props.previousSevenDays}>7 days</Button>
                 </ButtonGroup>
         </div>
 )

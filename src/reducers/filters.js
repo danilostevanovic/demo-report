@@ -1,6 +1,6 @@
-
+import moment from 'moment';
 const filtersReducerDefaultState = {
-  date: '',
+  date: moment(),
   id: '',
   mac: '',
   showData: false
@@ -16,7 +16,7 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
     case 'RESET_FILTERS':
       return {
         ...state,
-        date: '',
+        date: moment(),
         id: '',
         mac: '',
         showData: false

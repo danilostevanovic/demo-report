@@ -1,6 +1,6 @@
-const getContact =  (id,contacts)=>{
-    return contacts.filter((contact)=>{
-       return contact.contactId === id
+const getContact = (contacts, { id, mac }) => {
+    return contacts.filter((contact) => {
+        return contact.contactId === id || contact.mac === mac
     })
 }
 
