@@ -11,9 +11,12 @@ import './styles/styles.scss';
 
 
 
-store.dispatch(setDate(moment().subtract(20,'day')));
-store.dispatch(setId(54867972))
-store.dispatch(setShowData(true))
+
+
+
+// store.dispatch(setDate(moment().subtract(20,'day')));
+// store.dispatch(setId(54867972))
+// store.dispatch(setShowData(true))
 
 const state = store.getState();
 

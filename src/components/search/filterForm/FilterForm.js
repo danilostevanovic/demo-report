@@ -1,9 +1,16 @@
 import React from 'react';
+import CurrentDataView  from './currentDataView/CurrentDataView';
+import DatePicker from './datePicker/DatePicker';
+import ResetFilterButton from '../buttons/ResetFilterButton';
 
 
 const FilterForm = () => (
      <div>
-        This is filter form
+       <div>
+            <CurrentDataView />
+            <DatePicker />
+            <ResetFilterButton />
+       </div>
      </div>
 )
 
