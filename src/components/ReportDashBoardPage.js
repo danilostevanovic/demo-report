@@ -1,5 +1,5 @@
 import React from 'react';
-import ReportDisplayPage from '../components/reportDisplayPage';
+import ReportDisplayPage from '../components/reportDisplayPage/ReportDisplayPage';
 import Header from '../components/Header';
 import Search from '../components/search/Search';
 

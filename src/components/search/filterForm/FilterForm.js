@@ -7,9 +7,6 @@ import { connect } from 'react-redux';
 
 
 class FilterForm extends React.Component{
-  componentWillMount(){
-    console.log('provera',this.props.contacts)
-  }
    render() { 
      return(
       <div>
