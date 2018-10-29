@@ -11,11 +11,7 @@ const randomNumbers = (start, end, count) => {
         randomNumber;
     for (let i = 0; i < count; i++) {
         randomNumber = Math.floor(Math.random() * (end - start)) + start;
-        if (returnArray.indexOf(randomNumber) == -1) {
-            returnArray.push(randomNumber);
-        } else {
-            --i;
-        }
+        returnArray.push(randomNumber)
     }
     return returnArray;
 };
@@ -28,13 +24,13 @@ const generateData = (contactId,mac, howMany) => {
             mac:mac,
             createdAt:moment().subtract(i-1, 'days'),
             graphs: {
-                'status': randomNumbers(5, 100, 10),
-                'interterence': randomNumbers(5, 100, 10),
-                'TotalNoOfInteferenceNetwork': randomNumbers(5, 100, 10),
-                'RSS': randomNumbers(5, 100, 10),
-                'bitRate': randomNumbers(5, 100, 10),
-                'numberOfRetransimission': randomNumbers(5, 100, 10),
-                'numberOfClients': randomNumbers(5, 100, 10),
+                'status': randomNumbers(5, 100, 50),
+                'interterence': randomNumbers(5, 100, 50),
+                'TotalNoOfInteferenceNetwork': randomNumbers(5, 100, 50),
+                'RSS': randomNumbers(5, 100, 100),
+                'bitRate': randomNumbers(5, 100, 100),
+                'numberOfRetransimission': randomNumbers(5, 100, 50),
+                'numberOfClients': randomNumbers(5, 100, 50),
                 'totalTransfer': randomNumbers(1, 20, 1)[0]
             },
             tables:{
