@@ -2,7 +2,7 @@ import React from 'react';
 import AutoCompleteForm from './AutoCompleteForm';
 import MacForm from './MacForm';
 import ApplyFiltersButton from '../buttons/ApplyFiltersButton';
-import { Alert,Button } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
 import { setShowData, setMac } from '../../../store/configureStore';
 import { connect } from 'react-redux';
 
@@ -13,15 +13,15 @@ class SearchForm extends React.Component {
         show: true
     }
     handleDismiss = () => {
-        this.setState(()=>({
-            show:false,
-            error:undefined
+        this.setState(() => ({
+            show: false,
+            error: undefined
         }));
     }
 
     handleShow = () => {
-        this.setState(()=>({
-            show:true
+        this.setState(() => ({
+            show: true
         }));
     }
     applyFilters = () => {
@@ -29,9 +29,6 @@ class SearchForm extends React.Component {
             this.props.dispatch(setShowData(true));
         } else {
             this.setState(() => ({ error: 'you must fill contact Id or paste mac address in mac field' }))
-            setTimeout(() => {
-                this.setState(() => ({ error: undefined }))
-            }, 3000)
         }
     }
     setMac = (e) => {
@@ -45,15 +42,9 @@ class SearchForm extends React.Component {
             }
             else {
                 this.setState(() => ({ error: 'sorry that mac address does not exist in base! please fill contact Id field' }));
-                setTimeout(() => {
-                    this.setState(() => ({ error: undefined }))
-                }, 3000)
             }
         } else {
-            this.setState(() => ({ error: 'not valid format for mac address' }));
-            setTimeout(() => {
-                this.setState(() => ({ error: undefined }))
-            }, 3000)
+            this.setState(() => ({ error: 'not valid format for mac address, try to copy paste mac, or fill contact id field' }));
         }
 
     }
@@ -63,8 +54,18 @@ class SearchForm extends React.Component {
                 <MacForm mac={this.props.filters.mac} onChange={this.setMac} />
                 <AutoCompleteForm />
                 {this.state.error && (
-                    
-                    <p>{this.state.error}</p>)}
+
+                    <Alert bsStyle="danger" onDismiss={this.handleDismiss}>
+                        <h4>Oh snap! You got an error!</h4>
+                        <p>
+                            {this.state.error}
+                        </p>
+                        <p>
+                            <Button onClick={this.handleDismiss}>Hide Alert</Button>
+                        </p>
+                    </Alert>
+
+                )}
                 <ApplyFiltersButton onClick={this.applyFilters} />
             </div>
         )
