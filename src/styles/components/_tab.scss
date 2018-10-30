@@ -1,0 +1,9 @@
+.tab{
+    background:$tab-color;
+  
+    &-content{
+        background:$tab-color;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}

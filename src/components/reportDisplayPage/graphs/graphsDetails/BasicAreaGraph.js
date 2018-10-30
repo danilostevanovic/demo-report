@@ -7,10 +7,20 @@ class BasicAreaGraph extends React.Component {
     render() {
         const options = {
             chart: {
-                type: 'area'
+                type:'area',
+                zoomType: 'x',
+                spacingBottom: 15,
+                spacingTop: 10,
+                spacingLeft: 10,
+                spacingRight: 10,
+        
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 200
             },
             title: {
-                text: this.props.name
+                text: this.props.name,
+                allign:'left'
             },
             xAxis: {
                 allowDecimals: false,

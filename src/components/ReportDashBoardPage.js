@@ -6,10 +6,10 @@ import Search from '../components/search/Search';
 const ReportDashBoardPage = (props) => {
   return (
     <div>
-        <Header />
-        <Search />
-       <ReportDisplayPage />
-     </div>
+      <Header />
+      <Search />
+      <ReportDisplayPage />
+    </div>
   )
 }
 

@@ -1,39 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import getData from '../../selectors/data';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab, TabContainer, TabContent } from 'react-bootstrap';
 import Graphs from './graphs/Graphs';
-import Highcharts from 'highcharts/highstock'
-import HighchartsReact from 'highcharts-react-official'
 
 
-const options = {
-    chart: {
-        type: 'histogram'
-    },
-    title: {
-        text: 'HGw Inteference'
-    },
-    series: [{
-        data: [3.5, 3, 3.2, 3.1, 3.6, 3.9, 3.4]
-    }]
-}
+
 
 class ReportDisplayPage extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            showInfo: false
+        }
+    }
     componentDidUpdate() {
         console.log('provera', this.props.data)
     }
     render() {
         return (
             <div>
-                <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
-
+                <Tabs defaultActiveKey={2} id="uncontrolled-tab-example" className="tab">
                     <Tab eventKey={1} title="Table">
 
 
                     </Tab>
-                    <Tab eventKey={2} title="Graphs">
-                        {this.props.data.length === 0 ? <h1>There is no data at this time</h1> : <Graphs data={this.props.data} />}
+                    <Tab eventKey={2} title="Graphs" className="tab-content">
+                        {this.props.data.length === 0 ? <h1>There is no data at this time</h1> : <Graphs data={this.props.data} info={this.state.showInfo} />}
                     </Tab>
                 </Tabs>
             </div>

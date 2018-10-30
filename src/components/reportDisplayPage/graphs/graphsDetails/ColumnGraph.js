@@ -7,10 +7,20 @@ class ColumnGraph extends React.Component{
         
         const options = {
             chart: {
-                type: 'column'
+                type: 'column',
+                zoomType: 'x',
+                spacingBottom: 15,
+                spacingTop: 10,
+                spacingLeft: 10,
+                spacingRight: 10,
+        
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 200
             },
             title: {
-                text: this.props.name
+                text: this.props.name,
+                align:'left'
             },
                 yAxis: {
                     min: 0,

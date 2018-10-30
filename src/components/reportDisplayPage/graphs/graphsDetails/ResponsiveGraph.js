@@ -5,47 +5,35 @@ import HighchartsReact from 'highcharts-react-official'
 class ResponsiveGraph extends React.Component {
 
     render() {
-        const data = this.props.data[0].graphs.interterence;
+        const data = this.props.data[0].graphs
         const options = {
             
     
             title: {
-                text: this.props.name
+                text: this.props.name,
+                align:'left'
             },
     
-    
-            rangeSelector: {
-                selected: 1
+            chart: {
+                zoomType: 'x',
+                spacingBottom: 15,
+                spacingTop: 10,
+                spacingLeft: 10,
+                spacingRight: 10,
+        
+                // Explicitly tell the width and height of a chart
+                width: null,
+                height: 200
             },
     
             series: [{
-                name: 'AAPL Stock Price',
+                name: 'Max',
                 data: this.props.data,
                 type: 'area',
                 threshold: null,
-                tooltip: {
-                    valueDecimals: 2
-                }
             }],
     
-            responsive: {
-                rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        chart: {
-                            height: 300
-                        },
-                        subtitle: {
-                            text: null
-                        },
-                        navigator: {
-                            enabled: false
-                        }
-                    }
-                }]
-            }
+          
                 
         }
         return (
