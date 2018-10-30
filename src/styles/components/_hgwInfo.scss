@@ -1,0 +1,39 @@
+.hgw-card{
+    background: $card-color;
+    padding: 1rem 1rem .5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.75);
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(phone){
+        margin: 1rem auto;
+     }
+     @include respond(tab-land){
+        margin: 1rem auto;
+     }
+}
+.hgw{
+    display: flex;
+    justify-content: space-between;
+
+    &-header{
+        color: $blue-color;
+        align-self: center;
+        margin-bottom: -2rem;
+    }
+
+    &-prop{
+        font-size: $s-size
+    }
+
+    &-value{
+        font-size: $s-size;
+        color: $blue-color;
+    }
+}

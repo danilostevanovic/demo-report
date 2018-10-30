@@ -1,0 +1,50 @@
+.buttton-area{
+    min-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+
+ 
+}
+.hgwButton{
+    background: transparent;
+    color: #ccc;
+    font-size: $s-size;
+    border-color: $blue-color;
+    width: 11rem;
+    padding: .5rem;
+    border-radius: 2rem;
+    outline: none;
+    position: relative;
+
+    &-active{
+    background: $blue-color;
+    color: white;
+    font-size: $s-size;
+    border: none;
+    width: 11rem;
+    padding: .5rem;
+    border-radius: 2rem;
+    outline: none;
+    position: relative;
+
+    &::after{
+        content: '\25b2';
+        position: absolute;
+        top: .4rem;
+        color: white;
+        width: 1rem;
+        font-size: $s-size;
+        transform: translateX(.5rem);  
+    }
+    }
+    &::after{
+        content: '\25bc';
+        position: absolute;
+        top: .4rem;
+        color: $blue-color;
+        width: 1rem;
+        font-size: $s-size;
+        transform: translateX(.5rem);
+    }
+}

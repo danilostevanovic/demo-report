@@ -24,13 +24,13 @@ const generateData = (contactId,mac, howMany) => {
             mac:mac,
             createdAt:moment().subtract(i-1, 'days'),
             graphs: {
-                'status': randomNumbers(5, 300, 50),
-                'interterence': randomNumbers(5, 300, 50),
-                'TotalNoOfInteferenceNetwork': randomNumbers(5, 300, 50),
+                'status': randomNumbers(5, 300, 20),
+                'interterence': randomNumbers(5, 300, 20),
+                'TotalNoOfInteferenceNetwork': randomNumbers(5, 300, 20),
                 'RSS': randomNumbers(5, 300, 100),
                 'bitRate': randomNumbers(5, 300, 100),
-                'numberOfRetransimission': randomNumbers(5, 300, 50),
-                'numberOfClients': randomNumbers(5, 300, 50),
+                'numberOfRetransimission': randomNumbers(5, 300, 20),
+                'numberOfClients': randomNumbers(5, 300, 20),
                 'totalTransfer': randomNumbers(1, 20, 1)[0]
             },
             tables:{

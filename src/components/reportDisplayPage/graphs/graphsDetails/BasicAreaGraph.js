@@ -11,8 +11,7 @@ class BasicAreaGraph extends React.Component {
                 zoomType: 'x',
                 spacingBottom: 15,
                 spacingTop: 10,
-                spacingLeft: 10,
-                spacingRight: 10,
+               
         
                 // Explicitly tell the width and height of a chart
                 width: null,
