@@ -25,7 +25,7 @@ class ReportDisplayPage extends React.Component {
             <div>
                 <Tabs defaultActiveKey={2} id="Tabs" animation={false} >
                     <Tab eventKey={1} title="Table">
-                    {this.props.data.length === 0? <h1>There is no data at this time</h1>:<Tables />}
+                    {this.props.data.length === 0? <h1>There is no data at this time</h1>:<Tables data={this.props.data}/>}
                     </Tab>
                     <Tab eventKey={2} title="Graphs" animation={false} id='Graphs' onSelect={this.reloadGraphs}>
                         {this.props.data.length === 0 ? <h1>There is no data at this time</h1> : (

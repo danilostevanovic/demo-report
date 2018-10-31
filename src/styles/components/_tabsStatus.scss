@@ -13,11 +13,23 @@
     }
 
     &-header{
+        @include respond(smaller-desktop){
+            font-size: 1.3rem;
+        }
         color: $blue-color;
         font-size: $m-size;
+        font-weight: bold;
 
-        &-litle{
+        @include respond(phone){
             font-size: $s-size
+        }
+        &-litle{
+            font-size: $s-size;
+            @include respond(smaller-desktop){
+                font-size: 1.4rem
+            }
+
+    
         }
     }
 

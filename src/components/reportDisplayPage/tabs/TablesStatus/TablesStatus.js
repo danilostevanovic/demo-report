@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import getData from '../../../../selectors/data';
+
 
 
 class TablesStatus extends React.Component {
@@ -101,9 +100,4 @@ class TablesStatus extends React.Component {
         )
     }
 }
-const mapStateToProps = (state) => {
-    return {
-        data: getData(state.data, state.filters)
-    }
-}
-export default connect(mapStateToProps)(TablesStatus);
+export default TablesStatus;

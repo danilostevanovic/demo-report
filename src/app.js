@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import ReportDashBoardPage from './components/ReportDashBoardPage';
 import getData from './selectors/data';
-import moment from 'moment';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
-import { store, setDate,resetFilters,setId ,setShowData} from './store/configureStore';
+import { store} from './store/configureStore';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import  'react-dates/lib/css/_datepicker.css';
