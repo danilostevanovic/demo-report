@@ -9,17 +9,23 @@ const pieColor = {
     orange: '#FC9A0C',
     red: '#F6575B'
 }
-
-const TableWifiStatus = (props) => (
+const TableChanelStatus = (props) => (
     <div>
         <div className="card">
             <div className="wifi__status">
-                <p className="wifi__status-header">Wifi connected time</p>
-                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwWifiUsage}%`}</p>
+                <p className="wifi__status-header">HGw Chanel</p>
+                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceHome}%`}</p>
                 <div className="wifi__status-data">
+                    <div className="wifi__status-data-proc">
+                        <ul className="wifi__status-list">
+                            <li className="wifi__status-list-proc-lightBlue">{`${props.data[0].tables.HGwInteferenceHome}%`}</li>
+                            <li className="wifi__status-list-proc-blue">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</li>
+                        </ul>
+                    </div>
                     <div className="wifi__status-data-bullet">
                         <ul className="wifi__status-list">
-                            <li className="wifi__status-list-green">Percent of time with connected users</li>
+                            <li className="wifi__status-list-lightBlue">Auto:Yes</li>
+                            <li className="wifi__status-list-blue">Auto:Yes</li>
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
@@ -30,7 +36,33 @@ const TableWifiStatus = (props) => (
                             animationDuration={500}
                             animationEasing={"ease-out"}
                             data={[
-                                { value: props.data[0].tables.HGwWifiUsage, color: pieColor.green },
+                                { value: props.data[0].tables.HGwWifiUsage, color: pieColor.lightBlue },
+                                { value: props.data[0].tables.WifiConectionTime, color: pieColor.blue },
+                            ]}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="card">
+            <div className="wifi__status">
+                <p className="wifi__status-header">Hgw Percent of  Sticky Clients</p>
+                <p className="wifi__status-total-blue">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</p>
+                <div className="wifi__status-data">
+                    <div className="wifi__status-data-bullet">
+                        <ul className="wifi__status-list">
+                            <li className="wifi__status-list-blue">Percent of time with sith sticky Clients</li>
+                        </ul>
+                    </div>
+                    <div className="wifi__status-data-pie">
+                        <PieChart
+                            lineWidth={30}
+                            rounded={30}
+                            animate={true}
+                            animationDuration={500}
+                            animationEasing={"ease-out"}
+                            data={[
+                                { value: props.data[0].tables.HGwTimeWithStickyClients, color: pieColor.blue },
                                 { value: props.data[0].tables.WifiConectionTime, color: pieColor.grey },
                             ]}
                         />
@@ -40,57 +72,21 @@ const TableWifiStatus = (props) => (
         </div>
         <div className="card">
             <div className="wifi__status">
-                <p className="wifi__status-header">HGw Wifi Usage</p>
-                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwWifiUsage}%`}</p>
+                <p className="wifi__status-header">HGw  RSS status</p>
+                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwRssStatus}%`}</p>
                 <div className="wifi__status-data">
                     <div className="wifi__status-data-proc">
                         <ul className="wifi__status-list">
-                            <li className="wifi__status-list-proc-green">{`${props.data[0].tables.HGwWifiUsage}%`}</li>
-                            <li className="wifi__status-list-proc-orange">{`${props.data[0].tables.WifiConectionTime}%`}</li>
-                            <li className="wifi__status-list-proc-red">{`${props.data[0].tables.HGwWifiUsage}%`}</li>
-                        </ul>
-                    </div>
-                    <div className="wifi__status-data-bullet">
-                        <ul className="wifi__status-list">
-                            <li className="wifi__status-list-green">Low</li>
-                            <li className="wifi__status-list-orange">Medium</li>
-                            <li className="wifi__status-list-red">High</li>
-                        </ul>
-                    </div>
-                    <div className="wifi__status-data-pie">
-                        <PieChart
-                            lineWidth={30}
-                            rounded={30}
-                            animate={true}
-                            animationDuration={500}
-                            animationEasing={"ease-out"}
-                            data={[
-                                { value: props.data[0].tables.HGwWifiUsage, color: pieColor.green },
-                                { value: props.data[0].tables.WifiConectionTime, color: pieColor.red },
-                                { value: props.data[0].tables.HGwWifiUsage, color: pieColor.orange },
-                            ]}
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="card">
-            <div className="wifi__status">
-                <p className="wifi__status-header">HGw Inteference</p>
-                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceHome}%`}</p>
-                <div className="wifi__status-data">
-                    <div className="wifi__status-data-proc">
-                        <ul className="wifi__status-list">
-                            <li className="wifi__status-list-proc-green">{`${props.data[0].tables.HGwInteferenceHome}%`}</li>
+                            <li className="wifi__status-list-proc-green">{`${props.data[0].tables.HGwRssStatus}%`}</li>
                             <li className="wifi__status-list-proc-orange">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</li>
                             <li className="wifi__status-list-proc-red">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</li>
                         </ul>
                     </div>
                     <div className="wifi__status-data-bullet">
                         <ul className="wifi__status-list">
-                            <li className="wifi__status-list-green">Low</li>
+                            <li className="wifi__status-list-green">Good</li>
                             <li className="wifi__status-list-orange">Medium</li>
-                            <li className="wifi__status-list-red">High</li>
+                            <li className="wifi__status-list-red">Bad</li>
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
@@ -101,7 +97,7 @@ const TableWifiStatus = (props) => (
                             animationDuration={500}
                             animationEasing={"ease-out"}
                             data={[
-                                { value: props.data[0].tables.HGwWifiUsage, color: pieColor.green },
+                                { value: props.data[0].tables.HGwRssStatus, color: pieColor.green },
                                 { value: props.data[0].tables.WifiConectionTime, color: pieColor.red },
                                 { value: props.data[0].tables.HGwWifiUsage, color: pieColor.orange },
                             ]}
@@ -112,21 +108,21 @@ const TableWifiStatus = (props) => (
         </div>
         <div className="card">
             <div className="wifi__status">
-                <p className="wifi__status-header">HGw Home</p>
+                <p className="wifi__status-header">HGw Client's RSS status</p>
                 <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceSecondUse}%`}</p>
                 <div className="wifi__status-data">
                     <div className="wifi__status-data-proc">
                         <ul className="wifi__status-list">
                             <li className="wifi__status-list-proc-green">{`${props.data[0].tables.HGwInteferenceSecondUse}%`}</li>
-                            <li className="wifi__status-list-proc-orange">{`${props.data[0].tables.HGwTotalTrafic}%`}</li>
-                            <li className="wifi__status-list-proc-red">{`${props.data[0].tables.HGwWifiUsage}%`}</li>
+                            <li className="wifi__status-list-proc-orange">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</li>
+                            <li className="wifi__status-list-proc-red">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</li>
                         </ul>
                     </div>
                     <div className="wifi__status-data-bullet">
                         <ul className="wifi__status-list">
-                            <li className="wifi__status-list-green">Low</li>
+                            <li className="wifi__status-list-green">Good</li>
                             <li className="wifi__status-list-orange">Medium</li>
-                            <li className="wifi__status-list-red">High</li>
+                            <li className="wifi__status-list-red">Bad</li>
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
@@ -137,7 +133,7 @@ const TableWifiStatus = (props) => (
                             animationDuration={500}
                             animationEasing={"ease-out"}
                             data={[
-                                { value: props.data[0].tables.HGwWifiUsage, color: pieColor.green },
+                                { value: props.data[0].tables.HGwRssStatus, color: pieColor.green },
                                 { value: props.data[0].tables.WifiConectionTime, color: pieColor.red },
                                 { value: props.data[0].tables.HGwWifiUsage, color: pieColor.orange },
                             ]}
@@ -149,4 +145,4 @@ const TableWifiStatus = (props) => (
     </div>
 )
 
-export default TableWifiStatus;
+export default TableChanelStatus;

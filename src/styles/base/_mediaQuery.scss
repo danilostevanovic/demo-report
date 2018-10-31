@@ -31,4 +31,5 @@ $breakpoint arguement choices:
     @if $breakpoint == smaller-desktop {
         @media only screen and (max-width: 80em) { @content };     //1280px
     }
-}
+};
+

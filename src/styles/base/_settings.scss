@@ -7,4 +7,45 @@ $xl-size:4.8rem;
 //color 
 $tab-color:	#F5F5F5;
 $card-color: #fff;
-$blue-color:#0B4C7F
+$blue-color:#0B4C7F;
+$green-color:#3AE996;
+$red-color: #F6575B;
+$orange-color:#FC9A0C;
+$gray-color: #CCD2D3;
+$lightBlue-color:#8CFDFE;
+$bluePie-color:#1BA3EB;
+
+//minxin
+
+@mixin bullets($color){
+    content: '\2022';
+    color:$color;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    font-size: 3rem;
+    top: 0;
+    transform: translate(-1.3rem,-1.3rem)
+}
+@mixin  total($color) {
+   
+    position: absolute;
+    z-index: 5;
+    color:$color;
+    font-size: 2rem;
+    width: 2rem;
+    font-weight: bold;
+    top: 50%;
+    left: 72%;
+}
+@mixin proc($color){
+    @include respond(smaller-desktop){
+        font-size: 1.18rem;
+    }
+    max-width: 13rem;
+    font-size: $s-size;
+    position: relative;
+    margin-left: 1rem;
+    color:$color;
+    font-weight: bold;
+}

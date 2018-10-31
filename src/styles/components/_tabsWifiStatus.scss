@@ -1,0 +1,91 @@
+.wifi__status{
+  width:100%;
+  padding: .5rem 1.1rem 1.1rem 1.1rem;
+  position: relative;
+
+  &-total-green{
+      @include total($green-color)
+  }
+  &-total-blue{
+    @include total($bluePie-color)
+}
+
+    &-header{
+        @include respond(smaller-desktop){
+            font-size: 1.5rem;
+        }
+        color: $blue-color;
+        font-weight: bold;
+        font-size: $m-size;
+    }
+
+    &-data{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+
+        &-pie{
+            
+            width: 10rem;
+            max-width: 10rem;
+        }
+    }
+
+    &-list{
+        list-style: none;
+        font-size: $s-size;
+      
+        &-proc-green{
+            @include proc($green-color)
+        }
+        &-proc-orange{
+            @include proc($orange-color)
+        }
+        &-proc-red{
+            @include proc($red-color)
+        }
+        &-proc-blue{
+            @include proc($bluePie-color)
+        }
+        &-proc-lightBlue{
+            @include proc($lightBlue-color)
+        }
+
+
+
+
+        &-green,&-blue,&-green,&-lightBlue,&-orange,&-red{
+            @include respond(smaller-desktop){
+                font-size: 1.18rem;
+            }
+            max-width: 13rem;
+            font-size: $s-size;
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        &-green::before{
+            @include bullets($green-color)
+        }
+        
+        &-blue::before{
+            @include bullets($bluePie-color)
+        }
+
+        &-lightBlue::before{
+            @include bullets($lightBlue-color)
+        }
+        &-orange::before{
+            @include bullets($orange-color)
+        }
+        &-red::before{
+            @include bullets($red-color)
+        }
+       
+    }
+
+
+
+}
