@@ -39,8 +39,9 @@ button:disabled{
     position: absolute;
     z-index: 5555;
     background: #F2DEDE;
+    margin-top: .5rem;
     top: 0%;
-    left: 5%;
+    left: 62%;
     @include respond(phone){
         top: 54%;
         left: 0%;

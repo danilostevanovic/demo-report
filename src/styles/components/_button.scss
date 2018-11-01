@@ -25,12 +25,12 @@
     margin-bottom: 1rem;
 
    &-wrapper{
+       display: flex;
+       justify-content: flex-end;
     @include respond(phone){
-        display: flex;
         justify-content: center;
     }
     @include respond(tab-land){
-        display: flex;
         justify-content: center;
     }
    }
@@ -94,28 +94,17 @@
     }
 }
 .dateButton-wrapper{
-    @include respond(phone){
-        display: flex;
-        justify-content: center;
-        margin-bottom: .5rem;
-    }
-    @include respond(tab-land){
-        display: flex;
-        justify-content: center;
-        margin-bottom: .5rem;
-    }
+   display: flex;
+   justify-content: center;
+    margin-bottom: .5rem;
 
     &-setDate{
+        display: flex;
+        justify-content: center;
+        margin-bottom: .5rem;
         @include respond(phone){
-            display: flex;
             justify-content: start;
-            margin-bottom: .5rem;
             max-width: 15rem;
-        }
-        @include respond(tab-land){
-            display: flex;
-            justify-content: center;
-            margin-bottom: .5rem;
         }
     }
 }
