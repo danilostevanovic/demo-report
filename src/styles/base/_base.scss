@@ -41,5 +41,15 @@ button:disabled{
     background: #F2DEDE;
     top: 0%;
     left: 5%;
+    @include respond(phone){
+        top: 54%;
+        left: 0%;
+        width: 100%;
+    }
+    @include respond(tab-land){
+        top: 54%;
+        left: 0%;
+        width: 100%;
+    }
 }
 

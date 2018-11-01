@@ -38,7 +38,7 @@ class DatePicker extends React.Component {
                 <div>
                     <DateButton previousDay={this.previousDay} previousSevenDays={this.previousSevenDays} />
                 </div>
-                <div>
+                <div className="dateButton-wrapper-setDate">
                     <SingleDatePicker
                         startDateId={1}
                         endDateId={2}

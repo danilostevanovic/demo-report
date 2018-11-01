@@ -23,6 +23,17 @@
     outline: none;
     background:transparent;
     margin-bottom: 1rem;
+
+   &-wrapper{
+    @include respond(phone){
+        display: flex;
+        justify-content: center;
+    }
+    @include respond(tab-land){
+        display: flex;
+        justify-content: center;
+    }
+   }
   }
 
   .buttton-area{
@@ -30,6 +41,13 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
+
+    @include respond(phone){
+        justify-content: center;
+    }
+    @include respond(tab-land){
+        justify-content: center;
+    }
 
  
 }
@@ -73,5 +91,30 @@
         width: 1rem;
         font-size: $s-size;
         transform: translateX(.5rem);
+    }
+}
+.dateButton-wrapper{
+    @include respond(phone){
+        display: flex;
+        justify-content: center;
+        margin-bottom: .5rem;
+    }
+    @include respond(tab-land){
+        display: flex;
+        justify-content: center;
+        margin-bottom: .5rem;
+    }
+
+    &-setDate{
+        @include respond(phone){
+            display: flex;
+            justify-content: center;
+            margin-bottom: .5rem;
+        }
+        @include respond(tab-land){
+            display: flex;
+            justify-content: center;
+            margin-bottom: .5rem;
+        }
     }
 }

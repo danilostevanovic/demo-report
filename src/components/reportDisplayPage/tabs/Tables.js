@@ -29,19 +29,19 @@ class Tables extends React.Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm={4} md={3}>
+                        <Col sm={6} md={2} lg={3}>
                             <TablesStatus data={this.props.data} />
                         </Col>
-                        <Col sm={4} md={3}>
+                        <Col sm={6} md={2} lg={3}>
                             <TableBitRates data={this.props.data} />
                         </Col>
-                        <Col sm={4} md={2} >
+                        <Col sm={6} md={3} lg={2} >
                             <TableWifiStatus data={this.props.data} />
                         </Col>
-                        <Col sm={4} md={2}>
+                        <Col sm={6} md={3} lg={2}>
                             <TableChanelStatus data={this.props.data} />
                         </Col>
-                        <Col sm={1} md={2}>
+                        <Col sm={1} md={1}>
                             {this.state.showInfo && <HgwInfo />}
                         </Col>
                     </Row>

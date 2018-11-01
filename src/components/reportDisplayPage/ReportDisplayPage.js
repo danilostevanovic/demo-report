@@ -25,10 +25,10 @@ class ReportDisplayPage extends React.Component {
             <div>
                 <Tabs defaultActiveKey={1} id="Tabs" animation={false} unmountOnExit={true} >
                     <Tab eventKey={1} title="Table">
-                    {this.props.data.length === 0? <h1>There is no data at this time</h1>:<Tables data={this.props.data}/>}
+                    {this.props.data.length === 0? <h1 className="header-display">There is no data at this time</h1>:<Tables data={this.props.data}/>}
                     </Tab>
                     <Tab eventKey={2} title="Graphs" animation={false} id='Graphs' onSelect={this.reloadGraphs}>
-                        {this.props.data.length === 0 ? <h1>There is no data at this time</h1> : (
+                        {this.props.data.length === 0 ? <h1 className="header-display">There is no data at this time</h1> : (
                             <div>
                                 <Grid>
                                     <Row>

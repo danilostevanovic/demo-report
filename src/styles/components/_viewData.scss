@@ -5,6 +5,16 @@
     padding: 1rem;
     width: 27rem;
 
+    &__wrapper{
+        @include respond(phone){
+            display: flex;
+            justify-content: center
+        }
+        @include respond(tab-land){
+            display: flex;
+            justify-content: center
+        }
+    }
 
 
     &-header{

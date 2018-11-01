@@ -1,0 +1,19 @@
+.header{
+    @include respond(phone){
+        display: flex;
+        justify-content: center;
+    }
+    @include respond(tab-land){
+        display: flex;
+        justify-content: center;
+    }
+
+    &-display{
+        @include respond(phone){
+            display: flex;
+            justify-content: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+    }
+}

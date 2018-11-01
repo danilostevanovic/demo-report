@@ -28,19 +28,35 @@ $bluePie-color:#1BA3EB;
     transform: translate(-1.3rem,-1.3rem)
 }
 @mixin  total($color) {
+
+    @include respond(smaller-desktop){
+        font-size: 1.4rem;
+        top: 35%;
+        left:29%
+    }
+    @include respond(tab-land){
+        font-size: 2.4rem;
+    }
    
     position: absolute;
     z-index: 5;
     color:$color;
     font-size: 2rem;
-    width: 2rem;
+    width: 2.2rem;
+    max-width: 2.2rem;
+    height: 2rem;
+    max-height: 2rem;
     font-weight: bold;
-    top: 50%;
-    left: 72%;
+    top: 38%;
+    left: 35%;
+
 }
 @mixin proc($color){
     @include respond(smaller-desktop){
-        font-size: 1.18rem;
+        font-size: 1rem;
+    }
+    @include respond(tab-land){
+        font-size: 1.6rem;
     }
     max-width: 13rem;
     font-size: $s-size;

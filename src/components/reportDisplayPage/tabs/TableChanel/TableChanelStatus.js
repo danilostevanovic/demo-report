@@ -14,7 +14,6 @@ const TableChanelStatus = (props) => (
         <div className="card">
             <div className="wifi__status">
                 <p className="wifi__status-header">HGw Chanel</p>
-                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceHome}%`}</p>
                 <div className="wifi__status-data">
                     <div className="wifi__status-data-proc">
                         <ul className="wifi__status-list">
@@ -29,6 +28,7 @@ const TableChanelStatus = (props) => (
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
+                    <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceHome}%`}</p>
                         <PieChart
                             lineWidth={30}
                             rounded={30}
@@ -47,7 +47,6 @@ const TableChanelStatus = (props) => (
         <div className="card">
             <div className="wifi__status">
                 <p className="wifi__status-header">Hgw Percent of  Sticky Clients</p>
-                <p className="wifi__status-total-blue">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</p>
                 <div className="wifi__status-data">
                     <div className="wifi__status-data-bullet">
                         <ul className="wifi__status-list">
@@ -55,6 +54,7 @@ const TableChanelStatus = (props) => (
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
+                    <p className="wifi__status-total-blue">{`${props.data[0].tables.HGwTimeWithStickyClients}%`}</p>
                         <PieChart
                             lineWidth={30}
                             rounded={30}
@@ -73,7 +73,6 @@ const TableChanelStatus = (props) => (
         <div className="card">
             <div className="wifi__status">
                 <p className="wifi__status-header">HGw  RSS status</p>
-                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwRssStatus}%`}</p>
                 <div className="wifi__status-data">
                     <div className="wifi__status-data-proc">
                         <ul className="wifi__status-list">
@@ -90,6 +89,7 @@ const TableChanelStatus = (props) => (
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
+                    <p className="wifi__status-total-green">{`${props.data[0].tables.HGwRssStatus}%`}</p>
                         <PieChart
                             lineWidth={30}
                             rounded={30}
@@ -109,7 +109,6 @@ const TableChanelStatus = (props) => (
         <div className="card">
             <div className="wifi__status">
                 <p className="wifi__status-header">HGw Client's RSS status</p>
-                <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceSecondUse}%`}</p>
                 <div className="wifi__status-data">
                     <div className="wifi__status-data-proc">
                         <ul className="wifi__status-list">
@@ -126,6 +125,7 @@ const TableChanelStatus = (props) => (
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
+                    <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceSecondUse}%`}</p>
                         <PieChart
                             lineWidth={30}
                             rounded={30}

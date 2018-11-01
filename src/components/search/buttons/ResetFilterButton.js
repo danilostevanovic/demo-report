@@ -4,7 +4,7 @@ import { resetFilters } from '../../../store/configureStore';
 
 
 const ResetFilterButton = (props) => (
-    <div>
+    <div className="btn-reset-wrapper">
         <button className="btn-reset" onClick={() => {
             props.dispatch(resetFilters())
         }} >Reset filters </button>

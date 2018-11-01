@@ -27,15 +27,19 @@
 
 
         &-pie{
-            
+            position: relative;
             width: 10rem;
             max-width: 10rem;
+            
         }
     }
 
     &-list{
         list-style: none;
         font-size: $s-size;
+        @include respond(smaller-desktop){
+            margin-right: 1rem;
+        }
       
         &-proc-green{
             @include proc($green-color)
@@ -58,7 +62,10 @@
 
         &-green,&-blue,&-green,&-lightBlue,&-orange,&-red{
             @include respond(smaller-desktop){
-                font-size: 1.18rem;
+                font-size: 1rem;
+            }
+            @include respond(tab-land){
+                font-size: 1.4rem
             }
             max-width: 13rem;
             font-size: $s-size;

@@ -49,7 +49,7 @@ class SearchForm extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="searchForm">
                 <form onSubmit={this.applyFilters}>
                     <Grid fluid={true}>
                         <Row>
