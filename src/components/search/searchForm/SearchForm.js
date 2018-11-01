@@ -36,7 +36,7 @@ class SearchForm extends React.Component {
                 this.props.dispatch(setShowData(true));
                 this.setState(() => ({ error: undefined }));
             } else if (!isMatch) {
-                this.setState(() => ({ error: 'This mac does not exist in base' }))
+                this.setState(() => ({ error: 'This mac does not exist in the base' }))
             }
         }
         else {
