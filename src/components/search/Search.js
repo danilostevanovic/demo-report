@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class Search extends React.Component {
     render() {
         return (
-            <div>
+            <div >
                 {this.props.filters.showData ? <FilterForm /> : <SearchForm />}
             </div>
         )

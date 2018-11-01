@@ -23,7 +23,7 @@ class ReportDisplayPage extends React.Component {
     render() {
         return (
             <div>
-                <Tabs defaultActiveKey={2} id="Tabs" animation={false} >
+                <Tabs defaultActiveKey={1} id="Tabs" animation={false} unmountOnExit={true} >
                     <Tab eventKey={1} title="Table">
                     {this.props.data.length === 0? <h1>There is no data at this time</h1>:<Tables data={this.props.data}/>}
                     </Tab>

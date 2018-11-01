@@ -71,13 +71,13 @@ const generateData = (contactId,mac, howMany) => {
 };
 
 const data = [
-    ...generateData(31495080,'5A-3D-30-13-8F-15',700),
-    ...generateData(31452503,'A3-43-AE-41-2E-D7',600),
-    ...generateData(39531833,'9D-01-4A-A4-CB-91',400),
-    ...generateData(33992438,'D7-C4-71-4A-47-35',300),
-    ...generateData(54867972,'58-90-77-22-75-5C',200),
-    ...generateData(79238775,'B6-06-F6-C7-D5-04',150),
-    ...generateData(93603004,'0D-D3-6B-05-86-59',100)
+    ...generateData(31495080,'5A-3D-30-13-8F-15',7000),
+    ...generateData(31452503,'A3-43-AE-41-2E-D7',6000),
+    ...generateData(39531833,'9D-01-4A-A4-CB-91',4000),
+    ...generateData(33992438,'D7-C4-71-4A-47-35',3000),
+    ...generateData(54867972,'58-90-77-22-75-5C',2000),
+    ...generateData(79238775,'B6-06-F6-C7-D5-04',1500),
+    ...generateData(93603004,'0D-D3-6B-05-86-59',1000)
 ]
 
 

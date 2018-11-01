@@ -1,0 +1,29 @@
+.viewData{
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 27rem;
+
+
+
+    &-header{
+        color:$blue-color;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+        &-data-name{
+            color: $gray-color;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: -.5rem;
+        }
+
+        &-data-value{
+            color: $blue-color;
+            font-size: 1.4rem;
+            margin-left: .5rem;
+            margin-top: -5rem;
+        }
+    
+}
