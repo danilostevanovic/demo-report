@@ -11,6 +11,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @include respond(smaller-desktop){
+        width: 19rem;
+    }
+
     @include respond(phone){
         margin: 1rem auto;
      }

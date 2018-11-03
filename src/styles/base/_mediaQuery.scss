@@ -28,8 +28,11 @@ $breakpoint arguement choices:
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) { @content };    //1800px
     }
+    @if $breakpoint == small-desktop {
+        @media only screen and (max-width: 100em) { @content };     //1600px
+    }
     @if $breakpoint == smaller-desktop {
-        @media only screen and (max-width: 80em) { @content };     //1280px
+        @media only screen and (max-width: 85.5em) { @content };     //1368px
     }
 };
 

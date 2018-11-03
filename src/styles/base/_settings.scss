@@ -25,7 +25,7 @@ $bluePie-color:#1BA3EB;
     position: absolute;
     font-size: 3rem;
     top: 0;
-    transform: translate(-1.3rem,-1.3rem)
+    transform: translate(-1.3rem,-1.3rem);
 }
 @mixin  total($color) {
 
@@ -39,7 +39,6 @@ $bluePie-color:#1BA3EB;
     }
    
     position: absolute;
-    z-index: 5;
     color:$color;
     font-size: 2rem;
     width: 2.2rem;

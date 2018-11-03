@@ -35,13 +35,13 @@ class Tables extends React.Component {
                         <Col sm={6} md={2} lg={3}>
                             <TableBitRates data={this.props.data} />
                         </Col>
-                        <Col sm={6} md={3} lg={2} >
+                        <Col sm={12} md={3} lg={2} >
                             <TableWifiStatus data={this.props.data} />
                         </Col>
-                        <Col sm={6} md={3} lg={2}>
+                        <Col sm={12} md={3} lg={2}>
                             <TableChanelStatus data={this.props.data} />
                         </Col>
-                        <Col sm={1} md={1}>
+                        <Col sm={12} md={1}>
                             {this.state.showInfo && <HgwInfo />}
                         </Col>
                     </Row>
