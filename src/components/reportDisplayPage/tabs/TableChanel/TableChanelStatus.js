@@ -28,7 +28,7 @@ const TableChanelStatus = (props) => (
                         </ul>
                     </div>
                     <div className="wifi__status-data-pie">
-                    <p className="wifi__status-total-green">{`${props.data[0].tables.HGwInteferenceHome}%`}</p>
+                    <p className="wifi__status-total-blue">{`${props.data[0].tables.HGwInteferenceHome}%`}</p>
                         <PieChart
                             lineWidth={30}
                             rounded={30}

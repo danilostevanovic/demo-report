@@ -61,11 +61,11 @@ class TablesStatus extends React.Component {
                     <div className="tabs__status-data">
                         <div className="tabs__status-data">
                             <p className="tabs__status-header-litle" style={{marginRight:'2'}}>Unifi</p>
-                            <p className="tabs__status-value" style={{ background: this.getColor(table.HGwInteference['Unifi']),marginLeft:'2' }}>{table.HGwInteference['Unifi']}</p>
+                            <p className="tabs__status-value" style={{ background: this.getColor(table.HGwInteference['Unifi']) }}>{table.HGwInteference['Unifi']}</p>
                         </div>
                         <div className="tabs__status-data">
                             <p className="tabs__status-header-litle">Home</p>
-                            <p className="tabs__status-value" style={{ background: this.getColor(table.HGwInteference['Home']),marginLeft:'2' }}>{table.HGwInteference['Home']}</p>
+                            <p className="tabs__status-value" style={{ background: this.getColor(table.HGwInteference['Home']) }}>{table.HGwInteference['Home']}</p>
                         </div>
                     </div>
                 </div>
