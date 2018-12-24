@@ -7,10 +7,10 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import  'react-dates/lib/css/_datepicker.css';
 
-// this is only for test
+// this is merge
 
 
-// this is something new
+
 
 const jsx = (
     <Provider store={store}>
